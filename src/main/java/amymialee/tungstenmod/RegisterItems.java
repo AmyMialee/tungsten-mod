@@ -1,8 +1,7 @@
 package amymialee.tungstenmod;
 
 import amymialee.tungstenmod.blocks.TungstenBlock;
-import amymialee.tungstenmod.blocks.TungstenBlockBlockItem;
-import amymialee.tungstenmod.blocks.TungstenOreBlockItem;
+import amymialee.tungstenmod.blocks.TungstenBlockItem;
 import amymialee.tungstenmod.equipment.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -31,15 +30,14 @@ public class RegisterItems {
     public static ToolItem TUNGSTEN_SHOVEL = new TungstenShovelItem(TungstenToolMaterial.INSTANCE, 1.5F, -3F, new Item.Settings().group(TungstenMod.MOD_GROUP));
     public static ToolItem TUNGSTEN_HOE = new TungstenHoeItem(TungstenToolMaterial.INSTANCE, -1, -1F, new Item.Settings().group(TungstenMod.MOD_GROUP));
 
-
     public static void register() {
         Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_ingot"), TUNGSTEN_INGOT);
         Registry.register(Registry.BLOCK, new Identifier("tungstenmod", "tungsten_block"), TUNGSTEN_BLOCK);
         Registry.register(Registry.BLOCK, new Identifier("tungstenmod", "tungsten_tiles"), TUNGSTEN_TILES);
         Registry.register(Registry.BLOCK, new Identifier("tungstenmod", "tungsten_ore"), TUNGSTEN_ORE);
-        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_block"), new TungstenBlockBlockItem(TUNGSTEN_BLOCK, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_tiles"), new TungstenBlockBlockItem(TUNGSTEN_TILES, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
-        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_ore"), new TungstenOreBlockItem(TUNGSTEN_ORE, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_block"), new TungstenBlockItem(TUNGSTEN_BLOCK, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_tiles"), new TungstenBlockItem(TUNGSTEN_TILES, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
+        Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_ore"), new BlockItem(TUNGSTEN_ORE, new FabricItemSettings().group(TungstenMod.MOD_GROUP)));
 
         Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_helmet"), TUNGSTEN_HELMET);
         Registry.register(Registry.ITEM, new Identifier("tungstenmod", "tungsten_chestplate"), TUNGSTEN_CHESTPLATE);

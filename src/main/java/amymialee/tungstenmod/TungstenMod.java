@@ -37,29 +37,19 @@ public class TungstenMod implements ModInitializer {
             new Identifier("tungstenmod", "general"))
             .icon(() -> new ItemStack(RegisterItems.TUNGSTEN_INGOT))
             .appendItems(stacks -> {
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_INGOT));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_ORE));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_TILES));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_BLOCK));
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_HELMET));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_CHESTPLATE));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_LEGGINGS));
-                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_BOOTS));
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
-                stacks.add(ItemStack.EMPTY);
                 stacks.add(new ItemStack(RegisterItems.TUNGSTEN_SWORD));
                 stacks.add(new ItemStack(RegisterItems.TUNGSTEN_PICKAXE));
                 stacks.add(new ItemStack(RegisterItems.TUNGSTEN_AXE));
                 stacks.add(new ItemStack(RegisterItems.TUNGSTEN_SHOVEL));
                 stacks.add(new ItemStack(RegisterItems.TUNGSTEN_HOE));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_HELMET));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_CHESTPLATE));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_LEGGINGS));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_BOOTS));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_INGOT));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_ORE));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_TILES));
+                stacks.add(new ItemStack(RegisterItems.TUNGSTEN_BLOCK));
             })
             .build();
 

@@ -22,30 +22,29 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import java.util.Objects;
 
 @Mixin(PlayerEntity.class)
-public abstract class TungstenArmorMixin {
+public abstract class PlayerEntityMixin {
     @Shadow public abstract Iterable<ItemStack> getArmorItems();
 
     @Inject(method = "damage", at = @At("TAIL"))
     private void damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         try {
-            if (LivingEntity.class.isAssignableFrom(Objects.requireNonNull(source.getAttacker()).getClass())) {
-                if (((LivingEntity) source.getAttacker()).getGroup() == EntityGroup.ARTHROPOD) {
-                    Iterable<ItemStack> t = getArmorItems();
-                    int damage = 0;
-                    if (t != null) {
-                        for (ItemStack item : t) {
-                            try {
-                                if (item.getItem() == RegisterItems.TUNGSTEN_HELMET || item.getItem() == RegisterItems.TUNGSTEN_CHESTPLATE || item.getItem() == RegisterItems.TUNGSTEN_LEGGINGS || item.getItem() == RegisterItems.TUNGSTEN_BOOTS) {
-                                    damage += 1;
-                                    item.setDamage(item.getDamage() - 3);
-                                }
-                            } catch (Exception ignored) {
-                            }
+            if (source.getAttacker() instanceof LivingEntity && ((LivingEntity) source.getAttacker()).getGroup() == EntityGroup.ARTHROPOD) {
+                Iterable<ItemStack> armorItems = getArmorItems();
+                int damage = 0;
+                for (ItemStack item : armorItems) {
+                    try {
+                        if (item.getItem() == RegisterItems.TUNGSTEN_HELMET ||
+                                item.getItem() == RegisterItems.TUNGSTEN_CHESTPLATE ||
+                                item.getItem() == RegisterItems.TUNGSTEN_LEGGINGS ||
+                                item.getItem() == RegisterItems.TUNGSTEN_BOOTS
+                        ) {
+                            damage += 1;
+                            item.setDamage(item.getDamage() - 3);
                         }
-                    }
-                    if (damage > 0) {
-                        source.getAttacker().damage(DamageSource.MAGIC, damage);
-                    }
+                    } catch (Exception ignored) {}
+                }
+                if (damage > 0) {
+                    source.getAttacker().damage(DamageSource.MAGIC, damage);
                 }
             }
         } catch (Exception ignored) {}

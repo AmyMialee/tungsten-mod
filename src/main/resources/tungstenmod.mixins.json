@@ -4,7 +4,7 @@
   "package": "amymialee.tungstenmod.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "TungstenArmorMixin"
+    "PlayerEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

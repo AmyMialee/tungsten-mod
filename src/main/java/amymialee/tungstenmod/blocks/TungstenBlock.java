@@ -17,15 +17,9 @@ public class TungstenBlock extends Block {
     }
 
     public void onSteppedOn(World world, BlockPos pos, Entity entity) {
-        if (LivingEntity.class.isAssignableFrom(entity.getClass())) {
-            if (((LivingEntity) entity).getGroup() == EntityGroup.ARTHROPOD) {
-                entity.damage(DamageSource.MAGIC, 3.0F);
-            }
+        if (entity instanceof LivingEntity && ((LivingEntity) entity).getGroup() == EntityGroup.ARTHROPOD) {
+            entity.damage(DamageSource.MAGIC, 3.0F);
         }
         super.onSteppedOn(world, pos, entity);
-    }
-
-    public BlockSoundGroup getSoundGroup(BlockState state) {
-        return this.soundGroup;
     }
 }
