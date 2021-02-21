@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "tungsten_ingot",
+  "ingredients": [
+    {
+      "item": "tungstenmod:tungsten_tiles"
+    }
+  ],
+  "result": {
+    "item": "tungstenmod:tungsten_ingot",
+    "count": 1
+  }
+}

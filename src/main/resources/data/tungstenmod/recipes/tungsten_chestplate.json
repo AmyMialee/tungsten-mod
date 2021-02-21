@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "tungstenmod:tungsten_ingot"
+    }
+  },
+  "result": {
+    "item": "tungstenmod:tungsten_chestplate"
+  }
+}

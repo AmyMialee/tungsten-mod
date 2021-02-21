@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "amymialee.tungstenmod.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "TungstenArmorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

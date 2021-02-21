@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "I I"
+  ],
+  "key": {
+    "I": {
+      "item": "tungstenmod:tungsten_ingot"
+    }
+  },
+  "result": {
+    "item": "tungstenmod:tungsten_boots"
+  }
+}
