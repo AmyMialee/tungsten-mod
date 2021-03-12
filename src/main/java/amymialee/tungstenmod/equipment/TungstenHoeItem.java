@@ -31,7 +31,7 @@ public class TungstenHoeItem extends HoeItem {
         if (target.getGroup() == EntityGroup.ARTHROPOD) {
             stack.setDamage(stack.getDamage() - 3);
             target.setHealth(target.getHealth() - 1);
-            target.applyStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 3));
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 3));
             return true;
         }
         return super.postHit(stack, target, attacker);

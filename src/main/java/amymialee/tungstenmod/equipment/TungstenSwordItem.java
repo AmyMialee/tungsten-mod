@@ -34,8 +34,7 @@ public class TungstenSwordItem extends SwordItem {
         if (target.getGroup() == EntityGroup.ARTHROPOD) {
             stack.setDamage(stack.getDamage() - 3);
             target.setHealth(target.getHealth() - 4);
-            target.applyStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 3));
-            return true;
+            target.addStatusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 50, 3));
         }
         return super.postHit(stack, target, attacker);
     }

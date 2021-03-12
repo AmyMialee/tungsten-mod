@@ -16,5 +16,7 @@
   "item.tungstenmod.tungsten_hoe": "Tungsten Hoe",
 
   "item.tungstenmod.tungsten_effective.tooltip": "Effective against Arthropods.",
-  "item.tungstenmod.tungsten_harmful.tooltip": "Harmful to Arthropods."
+  "item.tungstenmod.tungsten_harmful.tooltip": "Harmful to Arthropods.",
+
+  "itemGroup.tungstenmod.general": "Tungsten Mod"
 }
